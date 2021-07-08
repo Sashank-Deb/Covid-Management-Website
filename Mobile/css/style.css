@@ -516,6 +516,7 @@ display: none;
 .A{
   width: 200px;
   height: 310px;
+  transition: 0.5s ease;
 }
 .A:hover{
   background: #060E22;
