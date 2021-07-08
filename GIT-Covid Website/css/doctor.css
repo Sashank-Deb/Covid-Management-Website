@@ -1,0 +1,414 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+header{
+  background-color: #191919;s
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.logo img{
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-left: 90px;
+  animation: transitionIn 1.5s;
+}
+
+ul{
+  list-style-type: none;
+  float: right;
+  margin-top: 30px;
+  margin-right: 25px;
+  animation: transitionIn 1.5s;
+}
+ul button{
+  display: inline-block;
+  padding: 5px 10px;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+ul button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+  padding: 5px 7px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+ul button a:hover{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+ul button.active a{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+.title{
+  position: absolute;
+  width: 500px;
+  top: 39%;
+  left: 7%;
+  animation: transitionIn 1.5s;
+}
+.title h1{
+  color: #fff;
+  font-size: 75px;
+  font-weight: 700;
+}
+.subtitle{
+  position: absolute;
+  top: 35%;
+  left: 7.8%;
+  animation: transitionIn 2.5s;
+}
+.subtitle h1{
+  color: #fff;
+  font-size: 15px;
+  transition: 0.5s ease;
+}
+.subtitle h1:hover{
+  color: #57FFB3;
+  font-size: 15px;
+}
+
+.subtitle2{
+  position: absolute;
+  top: 36%;
+  left: 91.8%;
+  animation: transitionIn 2.5s;
+}
+.subtitle2 h1{
+  color: #BBBABA;
+  font-size: 11px;
+}
+.subtitle3{
+  position: absolute;
+  top: 38%;
+  left: 86.5%;
+  text-align: right;
+  animation: transitionIn 2.5s;
+}
+.subtitle3 h1{
+  color: #BBBABA;
+  font-size: 15px;
+}
+
+/*.li{
+  position: absolute;
+  top: 60%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}*/
+.button{
+  position: absolute;
+  top: 69%;
+  left: 6%;
+  animation: transitionIn 1.5s;
+}
+.btn{
+  border-radius: 20px;
+  border:2px solid transparent;
+  padding: 15px 70px;
+  font-size: 16px;
+  color: #242424;
+  text-decoration: none;
+  background: #57FFB3;
+  margin: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+  animation: transitionIn 2.5s;
+}
+.btn:hover{
+  color: #57FFB3;
+  background: #060606;
+
+}
+.button1{
+  position: absolute;
+  top: 69%;
+  left: 25%;
+  animation: transitionIn 1.5s;
+}
+.btn1{
+  border-radius: 20px;
+  border:2px solid transparent;
+  padding: 15px 70px;
+  font-size: 16px;
+  color: #242424;
+  text-decoration: none;
+  background: #57FFB3;
+  margin: 10px;
+  transition: 0.3s ;
+  font-weight: bold;
+  animation: transitionIn 2.5s;
+}
+.btn1:hover{
+  color: #57FFB3;
+  background: #060606;
+}
+.grid{
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 60px;
+  position: absolute;
+  top: 18%;
+  left: 8.4%;
+  align-items: center;
+  color: #191919;
+  position: absolute;
+  animation: transitionIn 2.5s;
+}
+.grid > article{
+  background: black;
+  border: none;
+  text-align: left;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  width: 600px;
+  height: 520px;
+  transition: 0.3s ease;
+}
+
+.box{
+  position: absolute;
+  top: 9%;
+  left: 4%;
+  transition: 1s ease;
+}
+.box1{
+  position: absolute;
+  top: 9%;
+  left: 56.5%;
+  transition: 1s ease;
+}
+.smallbox{
+  position: absolute;
+  top: 14%;
+  left: 4%;
+  display: grid;
+  grid-gap: 10px;
+  transition: 0.3s ease;
+}
+.smallbox a{
+  text-decoration: none;
+  transition: 0.3s ease;
+  color: black;
+}
+.smallbox1{
+  position: absolute;
+  top: 14%;
+  left: 56.5%;
+  display: grid;
+  grid-gap: 10px;
+  transition: 0.3s ease;
+}
+.smallbox1 a{
+  text-decoration: none;
+  transition: 0.3s ease;
+  color: black;
+}
+.row{
+  background: white;
+  border-radius: 10px;
+  width: 500px;
+  height: 40px;
+  transition: 0.3s ease;
+  text-align: center;
+}
+.row:hover{
+  background: #57FFB3;
+  text-align: center;
+}
+.row:hover a{
+  color: black;
+  text-align: center;
+}
+.doc{
+  background: white;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .4);
+  border-radius: 10px;
+  width: 500px;
+  height: 120px;
+}
+.hello:hover .box{
+  transform: translateY(-90%);
+}
+.hello1:hover .box1{
+  transform: translateY(-90%);
+}
+.doc img{
+  width: 20%;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right:10px;
+  position: absolute;
+  left: 10%;
+}
+.text{
+  position: absolute;
+  left:35%;
+}
+.text h3{
+  font-size: 25px;
+  padding-top: 36px;
+}
+.text p{
+  font-weight: 600;
+}
+.text1{
+  text-align: center;
+}
+.text1 .p1{
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.contactForm .inputBox{
+  position: absolute;
+  width: 555px;
+  top: 40%;
+  left:4%;
+}
+.contactForm .inputBox1{
+  position: absolute;
+  width: 555px;
+  top: 38%;
+  left:4%;
+}
+.contactForm .inputBox input{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.contactForm .inputBox textarea{
+  width: 90%;
+  height: 250px;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  background: #c4c4c4;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox1 input[type="submit"]{
+  width:300px;
+  background:white;
+  color: #191919;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .4);
+  position: absolute;
+  left: 18%;
+}
+.contactForm .inputBox1 input[type="submit"]:hover{
+  background:#57FFB3;
+  transition: 0.4s ease;
+}
+
+
+
+
+
+
+
+.contactForm1 .inputBox{
+  position: absolute;
+  width: 555px;
+  top: 40%;
+  left:56.5%;
+}
+.contactForm1 .inputBox1{
+  position: absolute;
+  width: 555px;
+  top: 38%;
+  left:56.5%;
+}
+.contactForm1 .inputBox input{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.contactForm1 .inputBox textarea{
+  width: 90%;
+  height: 250px;
+  padding-top: 30px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  background: #c4c4c4;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+}
+.contactForm1 .inputBox1 input[type="submit"]{
+  width:300px;
+  background:white;
+  color: #191919;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .4);
+  position: absolute;
+  left: 18%;
+}
+.contactForm1 .inputBox1 input[type="submit"]:hover{
+  background:#57FFB3;
+  transition: 0.4s ease;
+}
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+    transform: rotateX(-10deg);
+    transform: translateY(-5%);
+  }
+  to{
+    opacity: 1;
+    transform: rotateX(0);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes transitionOut {
+  from{
+    opacity: 0;
+
+    transform: translateY(1%);
+  }
+  to{
+    opacity: 1;
+
+    transform: translateY(0%);
+  }
+}

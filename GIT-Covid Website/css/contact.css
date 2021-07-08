@@ -1,0 +1,228 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+ul{
+  list-style-type: none;
+  float: right;
+  margin-top: 30px;
+  margin-right: 25px;
+  animation: transitionIn 2.5s;
+}
+ul button{
+  display: inline-block;
+  padding: 5px 10px;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+ul button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+  padding: 5px 7px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+ul button a:hover{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+ul button.active a{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+.contact{
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.content{
+  animation: transitionOut 3s;
+}
+.content h2{
+  position: absolute;
+  top: 14%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 60px;
+}
+.content p{
+  position: absolute;
+  top: 20%;
+  left: 26.5%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  color: #d3d3d3;
+  font-size: 15px;
+}
+.content p:hover{
+  color: #57FFB3;
+}
+.container{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  animation: transitionIn 2.5s;
+}
+.container .contactInfo{
+  width: 50%;
+  display: flex;
+  margin-top: 200px;
+  margin-left: -400px;
+  flex-direction: column;
+}
+.container .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container .contactInfo .box .icon{
+  min-width: 60px;
+  height: 60px;
+  background: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+  transition: 0.4s ease;
+}
+.container .contactInfo .box .icon:hover{
+  background: #57FFB3;
+}
+.container .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+
+  font-size: 15px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 500;
+}
+.container .contactInfo .box .text h3{
+  font-weight: 700;
+  color: #57FFB3;
+  padding: 3px;
+}
+.contactForm{
+  animation: transitionIn 2.5s;
+  margin-top: 200px;
+  margin-left: 600px;
+  width: 450px;
+  padding: 50px;
+  background-color: black;
+  background-position: center;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+}
+
+.contactForm h2{
+  font-size: 30px;
+  color: #57FFB3;
+  font-weight: 700;
+  align-items: center;
+  padding: 20px;
+  transition: 0.4s ease;
+}
+
+.contactForm .inputBox{
+  position: relative;
+  width: 100%;
+
+}
+.contactForm .inputBox input{
+  width: 90%;
+  /*padding: 5px 0px;*/
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 4px;
+  border-bottom: 5px solid #57FFB3;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox textarea{
+  width: 90%;
+  height: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 4px;
+  border-bottom: 5px solid #57FFB3;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px 30px;
+  pointer-events: none;
+  transition: 0.6s ease;
+  color: #717171;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+  color: #fff;
+  font-size: 12px;
+  transform: translateY(-22px);
+}
+.contactForm .inputBox input[type="submit"]{
+  width:200px;
+  background:#d3d3d3;
+  color: #191919;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 20px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.4s ease;
+}
+.contactForm .inputBox input[type="submit"]:hover{
+  background:#57FFB3;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+  transition: 0.4s ease;
+}
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes transitionOut {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}

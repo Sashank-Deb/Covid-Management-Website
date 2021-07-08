@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  /*font-size: 1em;*/
+}
+header{
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+ul{
+  list-style-type: none;
+  float: right;
+  margin-top: 30px;
+  margin-right: 25px;
+  animation: transitionIn 2.5s;
+}
+ul button{
+  display: inline-block;
+  padding: 5px 10px;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+ul button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+  padding: 5px 7px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+ul button a:hover{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+ul button.active a{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+.title{
+  position: absolute;
+  top: 10%;
+  left: 12%;
+  animation: transitionIn 2.5s;
+}
+.title h1{
+  color: #fff;
+  font-size: 50px;
+}
+.subtitle{
+  position: absolute;
+  top: 18%;
+  left: 12.5%;
+  font-weight: 500;
+  animation: transitionIn 2.5s;
+}
+.subtitle p{
+  color: #d3d3d3;
+  font-size: 15px;
+}
+.subtitle p:hover{
+  color: #57FFB3;
+}
+
+.grid{
+  margin: 180px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  color: #191919;
+  position: absolute;
+  animation: transitionIn 2.5s;
+}
+.grid > article{
+  background: #d3d3d3;
+  border: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+  text-align: center;
+  width: 290px;
+  height: 255px;
+  transition: 0.5s ease;
+}
+.grid > article:hover{
+  background: #57FFB3;
+  transform: translateY(12px);
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+  color: #000;
+}
+.grid > article img{
+  width: 73%;
+  border-radius: 20px;
+  transition: 1s ease;
+}
+.text{
+  padding: 0px 10px 10px;
+  animation: transitionIn 2.5s;
+}
+.text h3{
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.a1{
+  text-decoration: none;
+  color: #000;
+}
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
