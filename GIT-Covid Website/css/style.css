@@ -518,7 +518,7 @@ img{
 .mtitle{
   position: absolute;
   top: 18%;
-  left: 12%;
+  left: 10%;
   animation: transitionIn 2.5s;
 }
 .mtitle h1{
@@ -534,7 +534,7 @@ img{
 .msubtitle{
   position: absolute;
   top: 75%;
-  left: 15%;
+  left: 13%;
   font-weight: 500;
   animation: transitionIn 3.5s;
 }
