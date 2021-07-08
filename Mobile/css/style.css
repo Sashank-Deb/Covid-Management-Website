@@ -516,11 +516,10 @@ display: none;
 .A{
   width: 200px;
   height: 310px;
-  transition: 0.5s ease;
 }
 .A:hover{
   background: #060E22;
-  transform: translateY(5px);
+
 }
 .C{
   width: 200px;
@@ -528,7 +527,7 @@ display: none;
 }
 .C:hover{
   background: #240B0B;
-  transform: translateY(5px);
+
 }
 .C:hover .delta{
  opacity: 0.4;
@@ -540,7 +539,7 @@ display: none;
 }
 .R:hover{
   background: #002816;
-  transform: translateY(5px);
+
 }
 .R:hover .delta{
  opacity: 0.4;
@@ -552,7 +551,7 @@ display: none;
 }
 .D:hover{
   background: #282828;
-  transform: translateY(5px);
+
 }
 .D:hover .delta{
  opacity: 0.4;
