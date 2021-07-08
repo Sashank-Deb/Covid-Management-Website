@@ -1,0 +1,736 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background-color: #191919;
+}
+header{
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+.logo img{
+  float: left;
+  width: 200px;
+  height: auto;
+  margin-left: 90px;
+  animation: transitionIn 1.5s;
+}
+
+svg path{
+  stroke: #57FFB3;
+  stroke-width:1.8px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  fill:#06100C;
+}
+
+.Andhra path{
+  fill:#2C805B;
+}
+.Assam path{
+  fill:#16402E;
+}
+.Bihar path{
+  fill:#0B2017;
+}
+.Chhattisgarh path{
+  fill:#16402E;
+}
+.Delhi path{
+  fill:#0B2017;
+}
+.Goa path{
+  fill: #16402E;
+}
+.Gujarat path{
+  fill:#16402E;
+}
+.Haryana path{
+  fill:#0B2017;
+}
+.Himachal path{
+  fill:#0B2017;
+}
+.Jammu path{
+  fill:#16402E;
+}
+.Karnataka path{
+  fill:#57FFB3;
+}
+.Kerala path{
+  fill:#2C805B;
+}
+.Madhya path{
+  fill:#0B2017;
+}
+.Maharashtra path{
+  fill:#2C805B;
+}
+.Manipur path{
+  fill:#0B2017;
+}
+.Odisha path{
+  fill:#2C805B;
+}
+.Punjab path{
+  fill:#16402E;
+}
+.Rajasthan path{
+  fill:#113023;
+}
+.Tamil path{
+  fill:#46CC8F;
+}
+.Telangana path{
+  fill: #16402E;
+}
+.Lakshadweep path{
+  stroke-width:2px;
+}
+.Daman path{
+  stroke-width:10px;
+}
+.Uttar path{
+  fill:#16402E;
+}
+.Uttarakhand path{
+  fill:#0B2017;
+}
+.West path{
+  fill:#16402E;
+}
+.map path:hover{
+  fill:#000;
+}
+.map{
+  position: absolute;
+  left: 70%;
+  top: 46%;
+  animation: transitionIn 2s;
+}
+.map1{
+  visibility: collapse;
+}
+.scale{
+  position: absolute;
+  left: 94%;
+  top: 55%;
+  animation: transitionIn 2s;
+}
+ul{
+  list-style-type: none;
+  float: right;
+  margin-top: 30px;
+  margin-right: 25px;
+  animation: transitionIn 1.5s;
+}
+ul button{
+  display: inline-block;
+  padding: 5px 10px;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+ul button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+  padding: 5px 7px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+ul button a:hover{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+ul button.active a{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+.title{
+  position: absolute;
+  width: 500px;
+  top: 39%;
+  left: 7%;
+  animation: transitionIn 1.5s;
+}
+.title h1{
+  color: #fff;
+  font-size: 75px;
+  font-weight: 700;
+}
+.subtitle{
+  position: absolute;
+  top: 35%;
+  left: 7.8%;
+  animation: transitionIn 2.5s;
+}
+.subtitle h1{
+  color: #fff;
+  font-size: 15px;
+  transition: 0.5s ease;
+}
+.subtitle h1:hover{
+  color: #57FFB3;
+  font-size: 15px;
+}
+
+.subtitle2{
+  position: absolute;
+  top: 36%;
+  left: 91.8%;
+  animation: transitionIn 2.5s;
+}
+.subtitle2 h1{
+  color: #BBBABA;
+  font-size: 11px;
+}
+.subtitle3{
+  position: absolute;
+  top: 38%;
+  left: 86.5%;
+  text-align: right;
+  animation: transitionIn 2.5s;
+}
+.subtitle3 h1{
+  color: #BBBABA;
+  font-size: 15px;
+}
+
+/*.li{
+  position: absolute;
+  top: 60%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}*/
+.button{
+  position: absolute;
+  top: 69%;
+  left: 6%;
+  animation: transitionIn 1.5s;
+}
+.btn{
+  border-radius: 20px;
+  border:2px solid transparent;
+  padding: 15px 70px;
+  font-size: 16px;
+  color: #242424;
+  text-decoration: none;
+  background: #57FFB3;
+  margin: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+  animation: transitionIn 2.5s;
+}
+.btn:hover{
+  color: #57FFB3;
+  background: #060606;
+
+}
+.button1{
+  position: absolute;
+  top: 69%;
+  left: 25%;
+  animation: transitionIn 1.5s;
+}
+.btn1{
+  border-radius: 20px;
+  border:2px solid transparent;
+  padding: 15px 70px;
+  font-size: 16px;
+  color: #242424;
+  text-decoration: none;
+  background: #57FFB3;
+  margin: 10px;
+  transition: 0.3s ;
+  font-weight: bold;
+  animation: transitionIn 2.5s;
+}
+.btn1:hover{
+  color: #57FFB3;
+  background: #060606;
+}
+.grid{
+  margin: 180px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left:41%;
+  top:-10%;
+  animation: transitionIn 2.5s;
+
+}
+.A{
+  /*background: #101010;*/
+  background: #060E22;
+  border: none;
+  color: #5786FF;
+  border-radius: 10px;
+  text-align: left;
+  width: 170px;
+  height: 150px;
+  transition: 0.3s ease;
+}
+.A:hover{
+  background: #060E22;
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0, 0.5);
+}
+.C{
+  background: #240B0B;
+  border: none;
+  color: #FF4718;
+  border-radius: 10px;
+  text-align: left;
+  width: 170px;
+  height: 150px;
+  transition: 0.3s ease;
+}
+.C:hover{
+  background: #240B0B;
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0, 0.5);
+}
+.C:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.R{
+  background: #002816;
+  border: none;
+  color: #57FFB3;
+  border-radius: 10px;
+  text-align: left;
+  width: 170px;
+  height: 150px;
+  transition: 0.3s ease;
+}
+.R:hover{
+  background: #002816;
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0, 0.5);
+}
+.R:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.D{
+  background: #282828;
+  border: none;
+  color: #BBBABA;
+  border-radius: 10px;
+  text-align: left;
+  width: 170px;
+  height: 150px;
+  transition: 0.3s ease;
+}
+.D:hover{
+  background: #282828;
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0, 0.5);
+}
+.D:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.text{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px
+}
+.text h3{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+p{
+  font-weight: 700;
+  font-size: 25px;
+}
+.yolo{
+  position: absolute;
+  left: 69%;
+  top: 45%;
+  animation: transitionIn 1.5s;
+}
+.footer{
+  position: absolute;
+  top: 70%;
+  font-weight: 700;
+  font-size: 12px;
+  padding-left: 3px;
+}
+.footer a{
+  text-decoration: none;
+  color: #BBBABA;
+}
+.delta{
+  font-weight: 700;
+  font-size: 12px;
+  padding: 2px;
+  opacity: 0;
+}
+.alu{
+  display: none;
+}
+
+
+.State {
+    width: 300px;
+    height: 10px;
+    text-align: left;
+    font-weight: bold;
+    position: absolute;
+    left: 56.5%;
+    top: 41%;
+    justify-content: left;
+    align-items: left;
+    animation: transitionIn 3.5s;
+    background: none;
+}
+
+
+.State select  {
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    left:-20%;
+    transform: translateY(-58px);
+    border: none;
+    width: 260px;
+    height: 45px;
+    border-radius: 10px;
+    background: #101010;
+    color: #57FFB3;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+}
+
+select:focus,
+select:hover{
+  outline: none;
+  border: none;
+  display:flex;
+}
+::-webkit-scrollbar{width: 0px; background: transparent}
+
+.custom-select {
+  width:270px;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  color: #888;
+}
+.custom-select .selector-options {
+  list-style: none;
+
+  margin-top: 0px;
+  background: transparent;
+  text-align: left;
+  color: #BBBABA;
+  border-radius: 10px;
+  z-index: 1;
+  position: absolute;
+  left: -20%;
+  font-size: 17px;
+  font-weight:700;
+  height: 400px;
+  overflow: hidden;
+  overflow-y:scroll;
+}
+
+.custom-select .selector-options li {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  cursor: pointer;
+  transition:0.3s ease;
+}
+
+.custom-select .selector-options li:hover {
+  background: transparent;
+  transform: translateX(-7%);
+  color: #57FFB3;
+}
+select:hover .custom-select .selector-options li{
+    display:block;
+
+}
+.mobile{
+  display: none;
+}
+
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+    transform: rotateX(-10deg);
+    transform: translateY(-5%);
+  }
+  to{
+    opacity: 1;
+    transform: rotateX(0);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes transitionOut {
+  from{
+    opacity: 0;
+
+    transform: translateY(1%);
+  }
+  to{
+    opacity: 1;
+
+    transform: translateY(0%);
+  }
+}
+
+@media only screen and (max-device-width: 680px){
+.logo img {
+display: none;
+}
+.grid{
+  margin: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  color: #fff;
+  position: absolute;
+  left:0%;
+  top:2%;
+}
+.A{
+  width: 200px;
+  height: 310px;
+}
+.A:hover{
+  background: #060E22;
+  transform: translateY(5px);
+}
+.C{
+  width: 200px;
+  height: 310px;
+}
+.C:hover{
+  background: #240B0B;
+  transform: translateY(5px);
+}
+.C:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.R{
+  width: 200px;
+  height: 310px;
+}
+.R:hover{
+  background: #002816;
+  transform: translateY(5px);
+}
+.R:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.D{
+  width: 200px;
+  height: 310px;
+}
+.D:hover{
+  background: #282828;
+  transform: translateY(5px);
+}
+.D:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.text{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px
+}
+.text h3{
+  text-transform: uppercase;
+  font-size: 20px;
+}
+p{
+  font-weight: 700;
+  font-size: 30px;
+}
+.yolo{
+  position: absolute;
+  left: 69%;
+  top: 45%;
+  animation: transitionIn 1.5s;
+}
+.footer{
+  position:relative;
+  top:20px;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0px;
+}
+.footer a{
+  text-decoration: none;
+  color: #BBBABA;
+}
+.delta{
+  font-weight: 700;
+  font-size: 20px;
+  padding: 2px;
+  opacity: 0;
+}
+.title{
+  position: absolute;
+  top: 32%;
+  left: 8%;
+}
+.subtitle{
+  position: absolute;
+  top: 30%;
+  left: 9%;
+}
+.subtitle2{
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  right: 5%;
+  text-align: right;
+  animation: transitionIn 2.5s;
+}
+.subtitle2 h1{
+  color: #BBBABA;
+  font-size: 15px;
+}
+.subtitle3{
+  position: absolute;
+  top: 32%;
+  left: 0%;
+  right: 5%;
+  text-align: right;
+  animation: transitionIn 2.5s;
+}
+.subtitle3 h1{
+  color: #BBBABA;
+  font-size: 15px;
+}
+
+.button{
+  position: absolute;
+  top: 46%;
+  left: 7%;
+}
+
+.button1{
+  position: absolute;
+  top: 46%;
+  left: 37%;
+  animation: transitionIn 1.5s;
+}
+.State {
+    position: absolute;
+    left: 75%;
+    top: 37%;
+    width: 250px;
+}
+.State select  {
+    padding: 10px;
+    position: absolute;
+    left:-20%;
+    transform: translateY(-58px);
+}
+
+.map{
+display: none;
+}
+.map1 path:hover{
+  fill: black;
+}
+.map1{
+  position: absolute;
+  left: 25%;
+  top: 55%;
+  visibility:visible;
+  animation: transitionIn 2s;
+}
+.scale{
+  position: absolute;
+  left: 87%;
+  top: 77%;
+  animation: transitionIn 2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mobile{
+  display: none;
+}
+img{
+  width: 75%;
+  border-radius: 20px;
+  position: absolute;
+  top:28%;
+  left: 13%;
+  transition: 0.5s ease;
+  animation: transitionIn 3.5s;
+}
+.mtitle{
+  position: absolute;
+  top: 18%;
+  left: 10%;
+  animation: transitionIn 2.5s;
+}
+.mtitle h1{
+  display: none;
+}
+.mtitle .para{
+  color: #fff;
+  font-size: 60px;
+  opacity: 0.9;
+  visibility: visible;
+  font-weight: 800;
+}
+.msubtitle{
+  position: absolute;
+  top: 68%;
+  left: 13%;
+  font-weight: 500;
+  animation: transitionIn 3.5s;
+}
+.msubtitle p{
+  color: #d3d3d3;
+  font-size: 30px;
+}
+.msubtitle p:hover{
+  color: #57FFB3;
+}
+
+}
