@@ -11,13 +11,13 @@ header{
   background-color: #191919;
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 .logo img{
-  float: left;
+
   width: 200px;
   height: auto;
-  margin-left: 90px;
+  position: absolute;
+  left: 2.5%;
   animation: transitionIn 1.5s;
 }
 
@@ -28,6 +28,7 @@ svg path{
   transition: 0.4s ease;
   fill:#06100C;
 }
+
 .Andhra path{
   fill:#2C805B;
 }
@@ -112,10 +113,15 @@ svg path{
   top: 46%;
   animation: transitionIn 2s;
 }
+.map1{
+  visibility: collapse;
+}
 .scale{
   position: absolute;
-  left: 94%;
-  top: 55%;
+  left: 93%;
+  top: 50%;
+}
+.sacle1{
   animation: transitionIn 2s;
 }
 ul{
@@ -154,7 +160,7 @@ ul button.active a{
   position: absolute;
   width: 500px;
   top: 39%;
-  left: 7%;
+  left: 5%;
   animation: transitionIn 1.5s;
 }
 .title h1{
@@ -165,7 +171,7 @@ ul button.active a{
 .subtitle{
   position: absolute;
   top: 35%;
-  left: 7.8%;
+  left: 5.5%;
   animation: transitionIn 2.5s;
 }
 .subtitle h1{
@@ -181,17 +187,17 @@ ul button.active a{
 .subtitle2{
   position: absolute;
   top: 36%;
-  left: 91.8%;
+  right:2%;
   animation: transitionIn 2.5s;
 }
 .subtitle2 h1{
   color: #BBBABA;
-  font-size: 11px;
+  font-size: 15px;
 }
 .subtitle3{
   position: absolute;
-  top: 38%;
-  left: 86.5%;
+  top: 39%;
+  right:2%;
   text-align: right;
   animation: transitionIn 2.5s;
 }
@@ -209,7 +215,7 @@ ul button.active a{
 .button{
   position: absolute;
   top: 69%;
-  left: 6%;
+  left: 4.5%;
   animation: transitionIn 1.5s;
 }
 .btn{
@@ -233,7 +239,7 @@ ul button.active a{
 .button1{
   position: absolute;
   top: 69%;
-  left: 25%;
+  left: 23%;
   animation: transitionIn 1.5s;
 }
 .btn1{
@@ -254,15 +260,15 @@ ul button.active a{
   background: #060606;
 }
 .grid{
-  margin: 180px;
+  margin: 0px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
   align-items: center;
   color: #fff;
   position: absolute;
-  left:41%;
-  top:-10%;
+  right:2%;
+  top:12%;
   animation: transitionIn 2.5s;
 
 }
@@ -280,7 +286,7 @@ ul button.active a{
 .A:hover{
   background: #060E22;
   transform: translateY(5px);
-  /*color: #000;*/
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0, 0.5);
 }
 .C{
   background: #240B0B;
@@ -295,7 +301,7 @@ ul button.active a{
 .C:hover{
   background: #240B0B;
   transform: translateY(5px);
-  /*color: #000;*/
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0, 0.5);
 }
 .C:hover .delta{
  opacity: 0.4;
@@ -314,7 +320,7 @@ ul button.active a{
 .R:hover{
   background: #002816;
   transform: translateY(5px);
-  /*color: #000;*/
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0, 0.5);
 }
 .R:hover .delta{
  opacity: 0.4;
@@ -333,7 +339,7 @@ ul button.active a{
 .D:hover{
   background: #282828;
   transform: translateY(5px);
-  /*color: #000;*/
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0, 0.5);
 }
 .D:hover .delta{
  opacity: 0.4;
@@ -356,7 +362,7 @@ p{
   position: absolute;
   left: 69%;
   top: 45%;
-    animation: transitionIn 1.5s;
+  animation: transitionIn 1.5s;
 }
 .footer{
   position: absolute;
@@ -476,15 +482,14 @@ select:hover .custom-select .selector-options li{
 @keyframes transitionIn {
   from{
     opacity: 0;
-    transform: rotateX(-10deg);
     transform: translateY(-5%);
   }
   to{
     opacity: 1;
-    transform: rotateX(0);
     transform: translateY(0%);
   }
 }
+
 
 @keyframes transitionOut {
   from{
@@ -499,51 +504,508 @@ select:hover .custom-select .selector-options li{
   }
 }
 
-@media only screen and (max-device-width: 680px){
-header{
-  display: none;
+
+
+/*media querry for portrait mode in ipad pro and bigger tablets*/
+@media only screen and (max-device-width: 1560px) and (orientation: portrait){
+.logo img {
+display: none;
 }
-.mobile{
-  display: block;
-}
-img{
-  width: 75%;
-  border-radius: 20px;
+.grid{
+  margin: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+  color: #fff;
   position: absolute;
-  top:28%;
-  left: 13%;
-  transition: 0.5s ease;
-  animation: transitionIn 3.5s;
+  left:0%;
+  top:1%;
+  transition: 1.5s ease;
 }
-.mtitle{
+.A{
+  width: 200px;
+  height: 250px;
+  transition: 1.5s ease;
+}
+.A:hover{
+  background: #060E22;
+  transform: translateY(5px);
+}
+.C{
+  width: 200px;
+  height: 250px;
+}
+.C:hover{
+  background: #240B0B;
+  transform: translateY(5px);
+}
+.C:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.R{
+  width: 200px;
+  height: 250px;
+}
+.R:hover{
+  background: #002816;
+  transform: translateY(5px);
+}
+.R:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.D{
+  width: 200px;
+  height: 250px;
+}
+.D:hover{
+  background: #282828;
+  transform: translateY(5px);
+}
+.D:hover .delta{
+ opacity: 0.4;
+ transition: 0.5s ease;
+}
+.text{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px
+}
+.text h3{
+  text-transform: uppercase;
+  font-size: 17px;
+}
+p{
+  font-weight: 700;
+  font-size: 25px;
+}
+.yolo{
   position: absolute;
-  top: 18%;
-  left: 10%;
+  left: 69%;
+  top: 45%;
+  animation: transitionIn 1.5s;
+}
+.footer{
+  position:relative;
+  top:20px;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 0px;
+}
+.footer a{
+  text-decoration: none;
+  color: #BBBABA;
+}
+.delta{
+  font-weight: 700;
+  font-size: 20px;
+  padding: 2px;
+  opacity: 0;
+}
+.title{
+  position: absolute;
+  top: 30%;
+  left: 8%;
+}
+.subtitle{
+  position: absolute;
+  top: 28%;
+  left: 9%;
+}
+.subtitle2{
+  position: absolute;
+  top: 28%;
+  left: 0%;
+  right: 5%;
+  text-align: right;
   animation: transitionIn 2.5s;
 }
-.mtitle h1{
-  display: none;
+.subtitle2 h1{
+  color: #BBBABA;
+  font-size: 15px;
 }
-.mtitle .para{
-  color: #fff;
-  font-size: 60px;
-  opacity: 0.9;
-  visibility: visible;
-  font-weight: 800;
-}
-.msubtitle{
+.subtitle3{
   position: absolute;
-  top: 75%;
-  left: 13%;
-  font-weight: 500;
-  animation: transitionIn 3.5s;
+  top: 31%;
+  left: 0%;
+  right: 5%;
+  text-align: right;
+  animation: transitionIn 2.5s;
 }
-.msubtitle p{
-  color: #d3d3d3;
-  font-size: 30px;
+.subtitle3 h1{
+  color: #BBBABA;
+  font-size: 15px;
 }
-.msubtitle p:hover{
-  color: #57FFB3;
+
+.button{
+  position: absolute;
+  top: 46%;
+  left: 7%;
 }
+
+.button1{
+  position: absolute;
+  top: 46%;
+  left: 37%;
+  animation: transitionIn 1.5s;
+}
+.State {
+    position: absolute;
+    left: 75%;
+    top: 37%;
+    width: 250px;
+}
+.State select  {
+    padding: 10px;
+    position: absolute;
+    left:-20%;
+    transform: translateY(-58px);
+}
+
+.map{
+display: none;
+}
+.map1 path:hover{
+  fill: black;
+}
+
+.map1{
+  position: absolute;
+  left: 25%;
+  top: 51%;
+  visibility:visible;
+  transform: scale(0.9);
+  transition: 1.5s ease;
+}
+.scale{
+  position: absolute;
+  left: 87%;
+  top: 68%;
+  animation: transitionIn 2s;
+}
+}
+/*media querry for portrait mode in ipad/tablets*/
+@media only screen and (max-device-width: 900px){
+.grid{
+  grid-gap: 20px;
+  transform: scale(0.9);
+  position: absolute;
+  left:-8%;
+}
+
+}
+
+@media only screen and (max-device-width: 850px){
+.grid{
+  grid-gap: 20px;
+  transform: scale(1);
+  position: absolute;
+  left:0%;
+}
+}
+/*media querry for portrait mode in mobiles*/
+@media only screen and (max-device-width: 500px){
+.map1{
+  transform: scale(1);
+}
+.scale{
+  position: absolute;
+  top: 70%;
+}
+.A{
+  height: 300px;
+}
+.C{
+  height: 300px;
+}
+.R{
+  height: 300px;
+}
+.D{
+  height: 300px;
+}
+}
+/*media querry for portrait mode in small mobiles*/
+@media only screen and (max-device-width: 380px){
+.scale{
+  position: absolute;
+  top: 69%;
+}
+}
+
+
+
+
+
+
+
+/*media querry for laptops of 15 inches and lower resolution*/
+@media only screen and (max-device-width: 1400px) and (orientation:landscape){
+header{
+  transform: scale(0.9);
+}
+  .grid{
+    transform: scale(0.9);
+    animation: transitionI 1.5s;
+    right:0%;
+  }
+  .subtitle2,.subtitle3{
+    right:3%;
+  }
+  .State{
+    left: 55.8%;
+  }
+  .button1{
+    left:26%;
+  }
+  .button,.button1{
+    top: 75%;
+  }
+  @keyframes transitionI {
+    from{
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    to{
+      opacity: 1;
+      transform: scale(0.9);
+    }
+  }
+
+}
+
+/*Surface Duo landscape fully open*/
+@media only screen and (device-width: 1114px) and (orientation:landscape){
+  header{
+    transform: scale(1);
+  }
+ul{
+  margin-right: -90px;
+}
+.grid{
+  transform: scale(0.8);
+  right:-13%;
+  transition: 0.5s ease;
+  animation: transitionD 1.5s;
+}
+.title h1{
+  font-size: 60px;
+}
+.State{
+  left:62%;
+}
+.subtitle2{
+  visibility: hidden;
+}
+.subtitle3{
+  visibility: hidden;
+}
+.button1{
+  left:27%;
+}
+
+.btn1, .btn{
+  padding-left: 48px;
+  padding-right: 48px;
+}
+@keyframes transitionD {
+  from{
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to{
+    opacity: 1;
+    transform: scale(0.8);
+  }
+}
+}
+
+/*media querry for landscape mode in mobiles*/
+@media only screen and (max-device-width: 1113px) and (orientation:landscape){
+  header{
+    transform: scale(0.5);
+    height: 160vh;
+  }
+  ul{
+    margin-top: -70vh;
+  }
+
+  .logo img {
+  display: none;
+  }
+  .grid{
+    margin: 80px;
+    display: grid;
+    transform: scale(1);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    color: #fff;
+    position: absolute;
+    left:0%;
+    top:-45%;
+    animation: transitionIn 1.5s;
+  }
+  .A{
+    width: 200px;
+    height: 310px;
+  }
+  .A:hover{
+    background: #060E22;
+    transform: translateY(5px);
+  }
+  .C{
+    width: 200px;
+    height: 310px;
+  }
+  .C:hover{
+    background: #240B0B;
+    transform: translateY(5px);
+  }
+  .C:hover .delta{
+   opacity: 0.4;
+   transition: 0.5s ease;
+  }
+  .R{
+    width: 200px;
+    height: 310px;
+  }
+  .R:hover{
+    background: #002816;
+    transform: translateY(5px);
+  }
+  .R:hover .delta{
+   opacity: 0.4;
+   transition: 0.5s ease;
+  }
+  .D{
+    width: 200px;
+    height: 310px;
+  }
+  .D:hover{
+    background: #282828;
+    transform: translateY(5px);
+  }
+  .D:hover .delta{
+   opacity: 0.4;
+   transition: 0.5s ease;
+  }
+  .text{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px
+  }
+  .text h3{
+    text-transform: uppercase;
+    font-size: 17px;
+  }
+  p{
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .yolo{
+    position: absolute;
+    left: 69%;
+    top: 45%;
+    animation: transitionIn 1.5s;
+  }
+  .footer{
+    position:relative;
+    top:20px;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0px;
+  }
+  .footer a{
+    text-decoration: none;
+    color: #BBBABA;
+  }
+  .delta{
+    font-weight: 700;
+    font-size: 20px;
+    padding: 2px;
+    opacity: 0;
+  }
+  .title{
+    position: absolute;
+    top:15%;
+    left: 8%;
+  }
+  .subtitle{
+    position: absolute;
+    top: 12%;
+    left: 9%;
+  }
+  .subtitle2{
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    right: 5%;
+    text-align: right;
+    animation: transitionIn 2.5s;
+  }
+  .subtitle2 h1{
+    color: #BBBABA;
+    font-size: 15px;
+  }
+  .subtitle3{
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    right: 5%;
+    text-align: right;
+    animation: transitionIn 2.5s;
+  }
+  .subtitle3 h1{
+    color: #BBBABA;
+    font-size: 15px;
+  }
+
+  .button{
+    position: absolute;
+    top: 46%;
+    left: 7%;
+  }
+
+  .button1{
+    position: absolute;
+    top: 46%;
+    left: 37%;
+  }
+  .State {
+      position: absolute;
+      left: 75%;
+      top: 37%;
+      width: 250px;
+  }
+  .State select  {
+      padding: 10px;
+      position: absolute;
+      left:-20%;
+      transform: translateY(-58px);
+  }
+
+  .map{
+  display: none;
+  }
+  .map1 path:hover{
+    fill: black;
+  }
+  .map1{
+    position: absolute;
+    left: 20%;
+    top: 60%;
+    visibility:visible;
+
+    animation: transitionIn 2s;
+  }
+  .scale{
+    margin-top: 320px;
+    position: absolute;
+    left: 87%;
+    top: 60%;
+    animation: transitionIn 2s;
+  }
+
 
 }
