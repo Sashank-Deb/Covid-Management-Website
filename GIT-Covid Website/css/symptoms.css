@@ -246,7 +246,7 @@ ul button.active a{
 /*media querry for portrait mode in mobiles*/
 @media only screen and (max-device-width: 500px)and (orientation: portrait){
   .container{
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -28%);
   }
 
 
