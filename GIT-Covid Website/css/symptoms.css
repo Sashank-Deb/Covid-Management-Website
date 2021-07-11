@@ -309,7 +309,7 @@ ul button.active a{
 }
 
 
-/*media querry for landscape mode in mobiles*/
+/*media querry for landscape mode in ipad*/
 @media only screen and (max-device-width: 1113px) and (orientation:landscape){
   header{
     transform: scale(0.5);
@@ -319,7 +319,7 @@ ul button.active a{
     margin-top: -70vh;
   }
   .container{
-      transform: translate(-45%, -21%);
+      transform: translate(-50%, -45%);
   }
 
   .grid{
@@ -337,8 +337,39 @@ ul button.active a{
   }
 
     .subtitle{
-      top: -25%;
+      top: -30%;
     }
+
+
+}
+
+/*media querry for landscape mode in iphone x and pixel xl*/
+@media only screen and (max-device-width: 900px) and (orientation:landscape){
+
+
+  .container{
+      transform: translate(-42%, -29%);
+  }
+    .title{
+      left: 20%;
+    }
+
+    .subtitle{
+      top: -25%;
+      left: 20%;
+    }
+
+
+}
+/*media querry for landscape mode in mobiles*/
+@media only screen and (max-device-width: 800px) and (orientation:landscape){
+
+
+  .container{
+      transform: translate(-42%, -34%);
+  }
+
+
 
 
 }
