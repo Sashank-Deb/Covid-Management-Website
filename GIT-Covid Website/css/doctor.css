@@ -4,20 +4,14 @@
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }
+body{
+  background-color: #191919;
+}
 header{
   background-color: #191919;s
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
-.logo img{
-  float: left;
-  width: 200px;
-  height: auto;
-  margin-left: 90px;
-  animation: transitionIn 1.5s;
-}
-
 ul{
   list-style-type: none;
   float: right;
@@ -50,126 +44,28 @@ ul button.active a{
   position: relative;
   border-bottom: 4px solid #57FFB3;
 }
-.title{
-  position: absolute;
-  width: 500px;
-  top: 39%;
-  left: 7%;
-  animation: transitionIn 1.5s;
-}
-.title h1{
-  color: #fff;
-  font-size: 75px;
-  font-weight: 700;
-}
-.subtitle{
-  position: absolute;
-  top: 35%;
-  left: 7.8%;
-  animation: transitionIn 2.5s;
-}
-.subtitle h1{
-  color: #fff;
-  font-size: 15px;
-  transition: 0.5s ease;
-}
-.subtitle h1:hover{
-  color: #57FFB3;
-  font-size: 15px;
-}
 
-.subtitle2{
+.container{
   position: absolute;
-  top: 36%;
-  left: 91.8%;
-  animation: transitionIn 2.5s;
-}
-.subtitle2 h1{
-  color: #BBBABA;
-  font-size: 11px;
-}
-.subtitle3{
-  position: absolute;
-  top: 38%;
-  left: 86.5%;
-  text-align: right;
-  animation: transitionIn 2.5s;
-}
-.subtitle3 h1{
-  color: #BBBABA;
-  font-size: 15px;
-}
-
-/*.li{
-  position: absolute;
-  top: 60%;
-  left: 44%;
-  transform: translate(-50%, -50%);
-}*/
-.button{
-  position: absolute;
-  top: 69%;
-  left: 6%;
-  animation: transitionIn 1.5s;
-}
-.btn{
-  border-radius: 20px;
-  border:2px solid transparent;
-  padding: 15px 70px;
-  font-size: 16px;
-  color: #242424;
-  text-decoration: none;
-  background: #57FFB3;
-  margin: 10px;
-  font-weight: bold;
-  transition: 0.3s;
-  animation: transitionIn 2.5s;
-}
-.btn:hover{
-  color: #57FFB3;
-  background: #060606;
-
-}
-.button1{
-  position: absolute;
-  top: 69%;
-  left: 25%;
-  animation: transitionIn 1.5s;
-}
-.btn1{
-  border-radius: 20px;
-  border:2px solid transparent;
-  padding: 15px 70px;
-  font-size: 16px;
-  color: #242424;
-  text-decoration: none;
-  background: #57FFB3;
-  margin: 10px;
-  transition: 0.3s ;
-  font-weight: bold;
-  animation: transitionIn 2.5s;
-}
-.btn1:hover{
-  color: #57FFB3;
-  background: #060606;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
 }
 .grid{
-  margin: 10px;
+  margin: 0px;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 60px;
-  position: absolute;
-  top: 18%;
-  left: 8.4%;
   align-items: center;
   color: #191919;
-  position: absolute;
   animation: transitionIn 2.5s;
 }
-.grid > article{
+.hello{
   background: black;
   border: none;
-  text-align: left;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.7);
   border-radius: 20px;
   width: 600px;
@@ -177,22 +73,49 @@ ul button.active a{
   transition: 0.3s ease;
 }
 
+
 .box{
-  position: absolute;
-  top: 9%;
-  left: 4%;
+  position: relative;
+  top: -8%;
+  display: grid;
+  justify-content: center;
   transition: 1s ease;
 }
-.box1{
+
+.doc{
+  background: white;
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .4);
+  border-radius: 10px;
+  width: 490px;
+  height: 120px;
+}
+.hello:hover .box{
+  transform: translateY(-90%);
+}
+
+.doc img{
+  width: 20%;
+  border-radius: 20px;
+  padding: 20px;
   position: absolute;
-  top: 9%;
-  left: 56.5%;
-  transition: 1s ease;
+  left: 12%;
+}
+.text{
+text-align: center;
+padding-left: 30px;
+}
+.text h3{
+  font-size: 25px;
+  padding-top: 36px;
+}
+.text p{
+  font-weight: 600;
 }
 .smallbox{
-  position: absolute;
-  top: 14%;
-  left: 4%;
+  position: relative;
+  top: 15%;
+  justify-content: center;
   display: grid;
   grid-gap: 10px;
   transition: 0.3s ease;
@@ -202,23 +125,11 @@ ul button.active a{
   transition: 0.3s ease;
   color: black;
 }
-.smallbox1{
-  position: absolute;
-  top: 14%;
-  left: 56.5%;
-  display: grid;
-  grid-gap: 10px;
-  transition: 0.3s ease;
-}
-.smallbox1 a{
-  text-decoration: none;
-  transition: 0.3s ease;
-  color: black;
-}
+
 .row{
   background: white;
   border-radius: 10px;
-  width: 500px;
+  width: 400px;
   height: 40px;
   transition: 0.3s ease;
   text-align: center;
@@ -231,41 +142,7 @@ ul button.active a{
   color: black;
   text-align: center;
 }
-.doc{
-  background: white;
-  border: none;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .4);
-  border-radius: 10px;
-  width: 500px;
-  height: 120px;
-}
-.hello:hover .box{
-  transform: translateY(-90%);
-}
-.hello1:hover .box1{
-  transform: translateY(-90%);
-}
-.doc img{
-  width: 20%;
-  border-radius: 20px;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right:10px;
-  position: absolute;
-  left: 10%;
-}
-.text{
-  position: absolute;
-  left:35%;
-}
-.text h3{
-  font-size: 25px;
-  padding-top: 36px;
-}
-.text p{
-  font-weight: 600;
-}
+
 .text1{
   text-align: center;
 }
@@ -273,28 +150,23 @@ ul button.active a{
   font-weight: 700;
   padding-top: 10px;
 }
-
+.contactForm{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
 .contactForm .inputBox{
-  position: absolute;
-  width: 555px;
+  position: relative;
   top: 40%;
-  left:4%;
 }
 .contactForm .inputBox1{
-  position: absolute;
-  width: 555px;
-  top: 38%;
-  left:4%;
-}
-.contactForm .inputBox input{
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 7px;
-  font-size: 15px;
-  font-weight: 700;
+  position: relative;
+  transform: translateY(-650%);
+  display: grid;
+  justify-content: center;
 }
 .contactForm .inputBox textarea{
-  width: 90%;
+  width: 500px;
   height: 250px;
   padding-top: 30px;
   padding-bottom: 5px;
@@ -303,11 +175,9 @@ ul button.active a{
   font-size: 15px;
   font-weight: 700;
   background: #c4c4c4;
-  margin: 10px 0px;
-  border: none;
   border-radius: 10px;
-  outline: none;
   resize: none;
+  outline: none;
 }
 .contactForm .inputBox1 input[type="submit"]{
   width:300px;
@@ -320,73 +190,12 @@ ul button.active a{
   font-size: 18px;
   font-weight: bold;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .4);
-  position: absolute;
-  left: 18%;
 }
 .contactForm .inputBox1 input[type="submit"]:hover{
   background:#57FFB3;
   transition: 0.4s ease;
 }
 
-
-
-
-
-
-
-.contactForm1 .inputBox{
-  position: absolute;
-  width: 555px;
-  top: 40%;
-  left:56.5%;
-}
-.contactForm1 .inputBox1{
-  position: absolute;
-  width: 555px;
-  top: 38%;
-  left:56.5%;
-}
-.contactForm1 .inputBox input{
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 7px;
-  font-size: 15px;
-  font-weight: 700;
-}
-.contactForm1 .inputBox textarea{
-  width: 90%;
-  height: 250px;
-  padding-top: 30px;
-  padding-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 15px;
-  font-weight: 700;
-  background: #c4c4c4;
-  margin: 10px 0px;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  resize: none;
-}
-.contactForm1 .inputBox1 input[type="submit"]{
-  width:300px;
-  background:white;
-  color: #191919;
-  border: none;
-  border-radius: 40px;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .4);
-  position: absolute;
-  left: 18%;
-}
-.contactForm1 .inputBox1 input[type="submit"]:hover{
-  background:#57FFB3;
-  transition: 0.4s ease;
-}
 @keyframes transitionIn {
   from{
     opacity: 0;
@@ -411,4 +220,171 @@ ul button.active a{
 
     transform: translateY(0%);
   }
+}
+
+
+
+
+/*media querry for portrait laptop potrait*/
+@media only screen and (max-device-width: 1560px) and (orientation: portrait){
+.container{
+    top: 65%;
+    left: 50%;
+  }
+.grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-bottom: 100px;
+  grid-gap: 75px;
+}
+.hello{
+  width: 700px;
+  height: 690px;
+}
+.smallbox{
+  top: 9%;
+}
+.doc{
+  width:600px;
+}
+.doc img{
+  width: 17%;
+}
+.contactForm .inputBox textarea{
+  height: 440px;
+  width: 600px;
+}
+.contactForm .inputBox1{
+  position: relative;
+  transform: translateY(-1125%);
+
+}
+
+}
+
+/*media querry for portrait mode in ipad*/
+@media only screen and (max-device-width: 850px)and (orientation: portrait){
+  .container{
+      top: 70%;
+    }
+
+}
+/*media querry for portrait mode in mobiles*/
+@media only screen and (max-device-width: 500px)and (orientation: portrait){
+  .container{
+      top: 50%;
+    }
+}
+
+/*media querry for portrait mode in iphonex and long phones*/
+@media only screen and (device-width: 375px) and (min-device-height: 700px){
+  .container{
+      top: 50%;
+    }
+
+}
+/*media querry for portrait mode in small mobiles*/
+@media only screen and (max-device-width: 370px)and (orientation: portrait){
+  .container{
+      top: 50%;
+    }
+}
+
+/*media querry for portrait mode in small mobiles*/
+@media only screen and (max-device-width: 300px)and (orientation: portrait){
+  .container{
+      top: 45%;
+    }
+  .subtitle{
+    top: 11%;
+  }
+}
+
+
+
+
+
+
+
+/*media querry for laptops of 15 inches and lower resolution*/
+@media only screen and (max-device-width: 1400px) and (orientation:landscape){
+  ul{
+    padding-right: 13vh;
+  }
+      .grid{
+      transform: scale(0.9);
+      animation: transitionI 1.5s;
+    }
+    .subtitle{
+      top:20%;
+    }
+
+    @keyframes transitionI {
+      from{
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      to{
+        opacity: 1;
+        transform: scale(0.9);
+      }
+    }
+
+}
+
+
+/*media querry for landscape mode in ipad*/
+@media only screen and (max-device-width: 1113px) and (orientation:landscape){
+  header{
+    transform: scale(0.8);
+    height: 100vh;
+  }
+  ul{
+    margin-top: -0vh;
+  }
+
+
+
+}
+
+/*media querry for landscape mode in iphone x and pixel xl*/
+@media only screen and (max-device-width: 900px) and (orientation:landscape){
+
+  .grid{
+  transform: scale(0.7);
+  animation: transitionI 1.5s;
+}
+ul{
+  padding-right: 0vh;
+  margin-top: -5vh;
+}
+@keyframes transitionI {
+  from{
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to{
+    opacity: 1;
+    transform: scale(0.7);
+  }
+}
+/*media querry for landscape mode in mobiles*/
+@media only screen and (max-device-width: 800px) and (orientation:landscape){
+  .grid{
+  transform: scale(0.8);
+  animation: transitionI 1.5s;
+}
+ul{
+  padding-right: 0vh;
+}
+@keyframes transitionI {
+  from{
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to{
+    opacity: 1;
+    transform: scale(0.8);
+  }
+}
 }
