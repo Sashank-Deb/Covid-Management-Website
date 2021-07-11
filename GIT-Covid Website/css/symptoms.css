@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  /*font-size: 1em;*/
+}
+body{
+  background-color: #191919;
 }
 header{
   background-color: #191919;
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 ul{
   list-style-type: none;
@@ -45,7 +46,7 @@ ul button.active a{
 .title{
   position: absolute;
   top: 10%;
-  left: 12.5%;
+  left: 13%;
   animation: transitionIn 2.5s;
 }
 .title h1{
@@ -55,7 +56,7 @@ ul button.active a{
 .subtitle{
   position: absolute;
   top: 18%;
-  left: 12.5%;
+  left: 13%;
   font-weight: 500;
   animation: transitionIn 2.5s;
 }
@@ -66,6 +67,7 @@ ul button.active a{
 .subtitle p:hover{
   color: #57FFB3;
 }
+/*hide animation
 .t1{
   position: absolute;
   top: 60.7%;
@@ -120,25 +122,31 @@ ul button.active a{
 .t5 h1{
   color: #fff;
   font-size: 10px;
+}*/
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
 }
 .grid{
-  margin: 180px;
+  margin: 0px;
+
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat( 5, 1fr);
   grid-gap: 30px;
   align-items: center;
   color: #191919;
-  position: absolute;
+  justify-content: center;
   animation: transitionIn 1.5s;
 }
 .grid > article{
   background: #d3d3d3;
-
   border: none;
+  width: 220px;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
   border-radius: 20px;
   text-align: center;
-  width: 220px;
   transition: 0.3s ease;
 }
 .grid > article:hover{
@@ -159,6 +167,8 @@ ul button.active a{
   text-transform: uppercase;
   font-size: 14px;
 }
+
+
 @keyframes transitionIn {
   from{
     opacity: 0;
@@ -174,4 +184,161 @@ ul button.active a{
 25%  {opacity: 0;}
 50%  {opacity: 0;}
 100% {opacity: 1;}
+}
+
+
+
+
+
+
+/*media querry for portrait mode universal*/
+@media only screen and (max-device-width: 1560px) and (orientation: portrait){
+.container{
+    transform: translate(-50%, -24%);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 100px;
+}
+.grid > article{
+  width: 350px;
+}
+
+.title{
+  top: 7%;
+}
+
+  .subtitle{
+    top: 12%;
+  }
+
+
+}
+
+@media only screen and (max-device-width: 1231px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -23%);
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+
+}
+
+/*media querry for portrait mode in ipad*/
+@media only screen and (max-device-width: 850px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -21%);
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+
+}
+/*media querry for portrait mode in mobiles*/
+@media only screen and (max-device-width: 500px)and (orientation: portrait){
+  .container{
+    transform: translate(-50%, -30%);
+  }
+
+
+}
+
+/*media querry for portrait mode in iphonex and long phones*/
+@media only screen and (device-width: 375px) and (min-device-height: 700px){
+  .container{
+    transform: translate(-50%, -36%);
+  }
+
+}
+/*media querry for portrait mode in mobiles*/
+@media only screen and (max-device-width: 370px)and (orientation: portrait){
+  .container{
+    transform: translate(-50%, -30%);
+  }
+
+}
+
+/*media querry for portrait mode in small mobiles*/
+@media only screen and (max-device-width: 300px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -40%);
+  }
+  .subtitle{
+    top: 11%;
+  }
+
+
+}
+
+
+
+
+
+/*media querry for laptops of 15 inches and lower resolution*/
+@media only screen and (max-device-width: 1400px) and (orientation:landscape){
+
+
+    .grid{
+      transform: scale(0.82);
+      animation: transitionI 1.5s;
+    }
+    .subtitle{
+      top:20%;
+    }
+
+    @keyframes transitionI {
+      from{
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      to{
+        opacity: 1;
+        transform: scale(0.82);
+      }
+    }
+
+}
+
+
+/*media querry for landscape mode in mobiles*/
+@media only screen and (max-device-width: 1113px) and (orientation:landscape){
+  header{
+    transform: scale(0.5);
+    height: 160vh;
+  }
+  ul{
+    margin-top: -70vh;
+  }
+  .container{
+      transform: translate(-45%, -21%);
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+  }
+  .grid > article{
+    width: 430px;
+  }
+
+
+  .title{
+    top: -35%;
+  }
+
+    .subtitle{
+      top: -25%;
+    }
+
+
 }
