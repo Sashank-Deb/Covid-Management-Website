@@ -131,7 +131,6 @@ ul button.active a{
 }
 .grid{
   margin: 0px;
-
   display: grid;
   grid-template-columns: repeat( 5, 1fr);
   grid-gap: 30px;
@@ -203,7 +202,7 @@ ul button.active a{
   margin-bottom: 100px;
 }
 .grid > article{
-  width: 350px;
+  width: 300px;
 }
 
 .title{
@@ -217,9 +216,28 @@ ul button.active a{
 
 }
 
-@media only screen and (max-device-width: 1231px)and (orientation: portrait){
+@media only screen and (max-device-width: 1025px)and (orientation: portrait){
   .container{
       transform: translate(-50%, -23%);
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+  .grid > article{
+    width: 350px;
+  }
+
+}
+
+@media only screen and (max-device-width: 900px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -28%);
+  }
+  .grid > article{
+    width: 300px;
   }
   .title{
     left:13%;
@@ -234,6 +252,9 @@ ul button.active a{
 @media only screen and (max-device-width: 850px)and (orientation: portrait){
   .container{
       transform: translate(-50%, -21%);
+  }
+  .grid > article{
+    width: 350px;
   }
   .title{
     left:13%;
@@ -337,7 +358,7 @@ ul button.active a{
   }
 
     .subtitle{
-      top: -30%;
+      top: -28%;
     }
 
 
