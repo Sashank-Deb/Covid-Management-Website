@@ -265,7 +265,7 @@ padding-left: 30px;
 /*media querry for portrait mode in ipad*/
 @media only screen and (max-device-width: 850px)and (orientation: portrait){
   .container{
-      top: 70%;
+      top: 50%;
     }
 
 }
