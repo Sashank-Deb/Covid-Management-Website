@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  /*font-size: 1em;*/
+}
+body{
+  background-color: #191919;
 }
 header{
   background-color: #191919;
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 ul{
   list-style-type: none;
@@ -66,16 +67,21 @@ ul button.active a{
 .subtitle p:hover{
   color: #57FFB3;
 }
-
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -38%);
+}
 .grid{
-  margin: 180px;
+  margin: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   align-items: center;
   color: #191919;
-  position: absolute;
-  animation: transitionIn 2.5s;
+  justify-content: center;
+  animation: transitionIn 1.5s;
 }
 .grid > article{
   background: #d3d3d3;
@@ -83,8 +89,7 @@ ul button.active a{
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
   border-radius: 20px;
   text-align: center;
-  width: 290px;
-  height: 255px;
+  width: 280px;
   transition: 0.5s ease;
 }
 .grid > article:hover{
@@ -99,7 +104,7 @@ ul button.active a{
   transition: 1s ease;
 }
 .text{
-  padding: 0px 10px 10px;
+  padding: 0px 10px 20px;
   animation: transitionIn 2.5s;
 }
 .text h3{
@@ -119,5 +124,195 @@ ul button.active a{
   to{
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+
+
+
+
+
+/*media querry for portrait laptop potrait*/
+@media only screen and (max-device-width: 1560px) and (orientation: portrait){
+.container{
+    transform: translate(-50%, -40%);
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 100px;
+  grid-gap: 30px;
+}
+.grid > article{
+  width: 300px;
+}
+.grid > article img{
+justify-content: center;
+padding-top: 25px;
+}
+.title{
+  top: 7%;
+}
+.subtitle{
+  top: 12%;
+}
+.text{
+  padding: 0px 10px 50px;
+}
+}
+
+@media only screen and (max-device-width: 1025px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -27%);
+  }
+  .grid > article{
+    width: 350px;
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+
+}
+
+@media only screen and (max-device-width: 900px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -35%);
+  }
+  .grid > article{
+    width: 300px;
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+
+}
+
+/*media querry for portrait mode in ipad*/
+@media only screen and (max-device-width: 850px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -27%);
+  }
+  .grid > article{
+    width: 350px;
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+
+}
+/*media querry for portrait mode in mobiles*/
+@media only screen and (max-device-width: 500px)and (orientation: portrait){
+  .container{
+    transform: translate(-50%, -37%);
+  }
+}
+
+/*media querry for portrait mode in iphonex and long phones*/
+@media only screen and (device-width: 375px) and (min-device-height: 700px){
+  .container{
+    transform: translate(-50%, -45%);
+  }
+
+}
+/*media querry for portrait mode in small mobiles*/
+@media only screen and (max-device-width: 370px)and (orientation: portrait){
+  .container{
+    transform: translate(-50%, -37%);
+  }
+}
+
+/*media querry for portrait mode in small mobiles*/
+@media only screen and (max-device-width: 300px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -40%);
+  }
+  .subtitle{
+    top: 11%;
+  }
+}
+
+
+
+
+
+
+
+/*media querry for laptops of 15 inches and lower resolution*/
+@media only screen and (max-device-width: 1400px) and (orientation:landscape){
+    .grid{
+      transform: scale(0.82);
+      animation: transitionI 1.5s;
+    }
+    .subtitle{
+      top:20%;
+    }
+
+    @keyframes transitionI {
+      from{
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      to{
+        opacity: 1;
+        transform: scale(0.82);
+      }
+    }
+
+}
+
+
+/*media querry for landscape mode in ipad*/
+@media only screen and (max-device-width: 1113px) and (orientation:landscape){
+  header{
+    transform: scale(0.5);
+    height: 160vh;
+  }
+  ul{
+    margin-top: -70vh;
+  }
+  .container{
+      transform: translate(-50%, -60%);
+  }
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+  }
+  .grid > article{
+    width: 430px;
+  }
+  .title{
+    top: -35%;
+  }
+  .subtitle{
+    top: -28%;
+  }
+}
+
+/*media querry for landscape mode in iphone x and pixel xl*/
+@media only screen and (max-device-width: 900px) and (orientation:landscape){
+    .container{
+      transform: translate(-42%, -40%);
+    }
+    .title{
+      left: 20%;
+    }
+    .subtitle{
+      top: -25%;
+      left: 20%;
+    }
+}
+/*media querry for landscape mode in mobiles*/
+@media only screen and (max-device-width: 800px) and (orientation:landscape){
+  .container{
+      transform: translate(-42%, -46%);
   }
 }
