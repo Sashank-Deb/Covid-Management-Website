@@ -253,7 +253,8 @@ padding-left: 30px;
 }
 .contactForm .inputBox1{
   position: relative;
-  transform: translateY(-1125%);
+  transform: translateY(0%);
+  transform: translateY(-470px);
 
 }
 
