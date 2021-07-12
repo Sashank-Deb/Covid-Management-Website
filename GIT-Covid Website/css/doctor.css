@@ -155,10 +155,7 @@ padding-left: 30px;
   justify-content: center;
   align-items: center;
 }
-.contactForm .inputBox{
-  position: relative;
-  top: 40%;
-}
+
 .contactForm .inputBox1{
   position: relative;
   transform: translateY(-650%);
