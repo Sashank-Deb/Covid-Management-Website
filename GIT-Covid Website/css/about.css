@@ -168,12 +168,15 @@ font-size: 23px;
 
 /*media querry for portrait mode in ipad*/
 @media only screen and (max-device-width: 850px)and (orientation: portrait){
+}
+/*media querry for portrait mode in mobiles*/
+@media only screen and (max-device-width: 500px)and (orientation: portrait){
 
   .t2{
-font-size: 12px;
+font-size: 11px;
   }
   .subtitle p, .subtitle1 p{
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
