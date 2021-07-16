@@ -1,0 +1,396 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-color: #191919;
+}
+header{
+  background-color: #191919;
+  background-size: cover;
+  background-position: center;
+}
+ul{
+  list-style-type: none;
+  float: right;
+  margin-top: 30px;
+  margin-right: 25px;
+  animation: transitionIn 2.5s;
+}
+ul button{
+  display: inline-block;
+  padding: 5px 10px;
+  color: transparent;
+  background-color: transparent;
+  border-color: transparent;
+}
+ul button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #FFF;
+  padding: 5px 7px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+ul button a:hover{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+ul button.active a{
+  color: #57FFB3;
+  position: relative;
+  border-bottom: 4px solid #57FFB3;
+}
+.title{
+  position: absolute;
+  top: 10%;
+  left: 13%;
+  animation: transitionIn 2.5s;
+}
+.title h1{
+  color: #fff;
+  font-size: 50px;
+}
+.subtitle{
+  position: absolute;
+  top: 18%;
+  left: 13%;
+  font-weight: 500;
+  animation: transitionIn 2.5s;
+}
+.subtitle p{
+  color: #d3d3d3;
+  font-size: 15px;
+}
+.subtitle p:hover{
+  color: #57FFB3;
+}
+/*hide animation
+.t1{
+  position: absolute;
+  top: 60.7%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  animation: transitionOut 2s;
+}
+.t1 h1{
+  color: #fff;
+  font-size: 10px;
+}
+.t2{
+  position: absolute;
+  top: 60.7%;
+  left: 30.3%;
+  transform: translate(-50%, -50%);
+  animation: transitionOut 2s;
+}
+.t2 h1{
+  color: #fff;
+  font-size: 10px;
+}
+.t3{
+  position: absolute;
+  top: 60.7%;
+  left: 46.5%;
+  transform: translate(-50%, -50%);
+  animation: transitionOut 2s;
+}
+.t3 h1{
+  color: #fff;
+  font-size: 10px;
+}
+.t4{
+  position: absolute;
+  top: 60.7%;
+  left: 79%;
+  transform: translate(-50%, -50%);
+  animation: transitionOut 2s;
+}
+.t4 h1{
+  color: #fff;
+  font-size: 10px;
+}
+.t5{
+  position: absolute;
+  top: 24.3%;
+  left: 79%;
+  transform: translate(-50%, -50%);
+  animation: transitionOut 2s;
+}
+.t5 h1{
+  color: #fff;
+  font-size: 10px;
+}*/
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+.grid{
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat( 5, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+  color: #191919;
+  justify-content: center;
+  animation: transitionIn 1.5s;
+}
+.grid > article{
+  background: #d3d3d3;
+  border: none;
+  width: 220px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+.grid > article:hover{
+  background: #57FFB3;
+  transform: translateY(12px);
+  box-shadow: 2px 2px 36px 0px rgba(0, 0, 0, 0.9);
+  color: #000;
+}
+
+.grid > article img{
+  width: 92%;
+  border-radius: 20px;
+}
+.text{
+  padding: 0px 20px 20px;
+}
+.text h3{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes transitionOut {
+  0% {opacity: 0;}
+25%  {opacity: 0;}
+50%  {opacity: 0;}
+100% {opacity: 1;}
+}
+
+
+
+
+
+
+/*media querry for portrait mode universal*/
+@media only screen and (max-device-width: 1560px) and (orientation: portrait){
+.container{
+    transform: translate(-50%, -24%);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 100px;
+}
+.grid > article{
+  width: 300px;
+}
+
+.title{
+  top: 7%;
+}
+
+  .subtitle{
+    top: 12%;
+  }
+
+
+}
+
+@media only screen and (max-device-width: 1025px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -23%);
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+  .grid > article{
+    width: 350px;
+  }
+
+}
+
+@media only screen and (max-device-width: 900px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -28%);
+  }
+  .grid > article{
+    width: 300px;
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+
+}
+
+/*media querry for portrait mode in ipad*/
+@media only screen and (max-device-width: 850px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -21%);
+  }
+  .grid > article{
+    width: 350px;
+  }
+  .title{
+    left:13%;
+  }
+  .subtitle{
+    left:13%;
+  }
+
+}
+/*media querry for portrait mode in mobiles*/
+@media only screen and (max-device-width: 500px)and (orientation: portrait){
+  .container{
+    transform: translate(-50%, -28%);
+  }
+
+
+}
+
+/*media querry for portrait mode in iphonex and long phones*/
+@media only screen and (device-width: 375px) and (min-device-height: 700px){
+  .container{
+    transform: translate(-50%, -36%);
+  }
+
+}
+/*media querry for portrait mode in mobiles*/
+@media only screen and (max-device-width: 370px)and (orientation: portrait){
+  .container{
+    transform: translate(-50%, -30%);
+  }
+
+}
+
+/*media querry for portrait mode in small mobiles*/
+@media only screen and (max-device-width: 300px)and (orientation: portrait){
+  .container{
+      transform: translate(-50%, -40%);
+  }
+  .subtitle{
+    top: 11%;
+  }
+
+
+}
+
+
+
+
+
+/*media querry for laptops of 15 inches and lower resolution*/
+@media only screen and (max-device-width: 1400px) and (orientation:landscape){
+
+
+    .grid{
+      transform: scale(0.82);
+      animation: transitionI 1.5s;
+    }
+    .subtitle{
+      top:20%;
+    }
+
+    @keyframes transitionI {
+      from{
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      to{
+        opacity: 1;
+        transform: scale(0.82);
+      }
+    }
+
+}
+
+
+/*media querry for landscape mode in ipad*/
+@media only screen and (max-device-width: 1113px) and (orientation:landscape){
+  header{
+    transform: scale(0.5);
+    height: 160vh;
+  }
+  ul{
+    margin-top: -70vh;
+  }
+  .container{
+      transform: translate(-50%, -45%);
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 100px;
+  }
+  .grid > article{
+    width: 430px;
+  }
+
+
+  .title{
+    top: -35%;
+  }
+
+    .subtitle{
+      top: -28%;
+    }
+
+
+}
+
+/*media querry for landscape mode in iphone x and pixel xl*/
+@media only screen and (max-device-width: 900px) and (orientation:landscape){
+
+
+  .container{
+      transform: translate(-42%, -25%);
+  }
+    .title{
+      left: 20%;
+    }
+
+    .subtitle{
+      top: -25%;
+      left: 20%;
+    }
+
+
+}
+/*media querry for landscape mode in mobiles*/
+@media only screen and (max-device-width: 800px) and (orientation:landscape){
+
+
+  .container{
+      transform: translate(-42%, -30%);
+  }
+
+
+
+
+}
