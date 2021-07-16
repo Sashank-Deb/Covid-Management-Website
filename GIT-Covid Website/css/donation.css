@@ -78,17 +78,18 @@ ul button.active a{
   opacity: 0.2;
 }
 .subtitle1{
-  width: 100%;
-  text-align: center;
   font-weight: 500;
-  margin-top: 0px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   animation: transitionIn 2.5s;
 }
 .subtitle1 p{
   color: #d3d3d3;
-  font-size: 15px;
-  padding-left: 250px;
-  padding-right: 250px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 .subtitle1 p:hover{
   color: #57FFB3;
@@ -263,12 +264,10 @@ a{
     margin-right: auto;
   }
   .subtitle1 p{
-    padding-left: 70px;
-    padding-right: 70px;
+    font-size: 25px;
   }
   .subtitle p{
-    padding-left: 70px;
-    padding-right: 70px;
+    font-size: 25px;
   }
 
 
@@ -278,13 +277,10 @@ a{
 
 @media only screen and (max-device-width: 500px)and (orientation: portrait){
   .subtitle1 p{
-    font-size: 10px;
-    padding-left: 70px;
-    padding-right: 70px;
+    font-size: 11px;
+
   }
   .subtitle p{
-    font-size: 25px;
-    padding-left: 70px;
-    padding-right: 70px;
+    font-size: 10px;
   }
 }
