@@ -169,9 +169,6 @@ font-size: 25px;
 /*media querry for portrait mode in ipad*/
 @media only screen and (max-device-width: 850px)and (orientation: portrait){
 
-}
-/*media querry for portrait mode in mobiles*/
-@media only screen and (max-device-width: 500px)and (orientation: portrait){
   .t2{
 font-size: 10px;
   }
