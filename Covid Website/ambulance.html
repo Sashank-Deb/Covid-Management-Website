@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> AMBULANCE | SERVICES | COVID-19 Management </title>
+    <link rel="icon" href="assets/favicon.png" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="css/hospital.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.click').click(function(){
+          $('.popup_box').css("display", "block");
+        });
+        $('.btn1').click(function(){
+          $('.popup_box').css("display", "none");
+        });
+      });
+    </script>
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <body>
+    <header>
+    <div class="main">
+      <ul>
+        <button><a href="index.html">HOME</a></button>
+        <button><a href="symptoms.html">SYMPTOMS</a></button>
+        <button class="active"><a href="services.html">SERVICES</a></button>
+        <button><a href="about.html">ABOUT US</a></button>
+        <button><a href="contact us.html">CONTACT US</a></button>
+      </ul>
+    </div>
+    <div class="title">
+      <h1>Covid-19 Ambulance</h1>
+    </div>
+    <div class="subtitle">
+      <p>Check the Availability of Ambulance Services</p>
+    </div>
+      <div class="container">
+        <main class="grid">
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText0">Apollo Hospital's Ambulances</h3>
+                          <p class="sub" id="SubtitleText0">Manager: NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText0">NA</p>
+                            <script>
+                            fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                            .then((response) => {
+                              return response.json();
+                            })
+                            .then((data) => {
+                              {
+
+                                var s= data.feed.entry[0].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[0].title.$t;
+                                document.getElementById("TitleText0").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText0").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText0").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText0").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText0").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[1].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[1].title.$t;
+                                document.getElementById("TitleText1").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText1").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText1").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText1").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText1").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[2].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[2].title.$t;
+                                document.getElementById("TitleText2").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText2").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText2").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText2").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText2").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[3].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[3].title.$t;
+                                document.getElementById("TitleText3").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText3").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText3").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText3").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText3").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[4].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[4].title.$t;
+                                document.getElementById("TitleText4").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText4").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText4").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText4").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText4").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[5].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[5].title.$t;
+                                document.getElementById("TitleText5").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText5").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText5").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText5").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText5").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[6].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[6].title.$t;
+                                document.getElementById("TitleText6").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText6").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText6").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText6").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText6").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[7].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[7].title.$t;
+                                document.getElementById("TitleText7").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText7").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText7").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText7").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText7").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[8].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[8].title.$t;
+                                document.getElementById("TitleText8").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText8").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText8").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText8").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText8").innerHTML = subtitle;
+                            }
+
+                            {
+
+                                var s= data.feed.entry[9].content.$t.split(",");
+                                console.log('Hospital 01-Complete Data:',s);
+
+                                var title= data.feed.entry[9].title.$t;
+                                document.getElementById("TitleText9").innerHTML = title;
+
+                                var s1= s[0].split("total: ");
+                                var total=s1[1];
+                                document.getElementById("TotalText9").innerHTML = total;
+
+                                var s2= s[1].split("vacant: ");
+                                var vacant=s2[1];
+                                document.getElementById("VacantText9").innerHTML = vacant;
+
+                                var s3= s[2].split("lastupdated:  ");
+                                var last=s3[1];
+                                document.getElementById("LastText9").innerHTML = last;
+
+                                var s4= s[3].split("manager: ");
+                                var subtitle=s4[1];
+                                document.getElementById("SubtitleText9").innerHTML = subtitle;
+                            }
+                            })
+                            .catch();
+
+                            </script>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText0">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText0">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" class="click" onclick="myFunction0()">Contact Details</a>
+                      <script>
+                      function myFunction0() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[0].content.$t.split(",");
+                            var title= data.feed.entry[0].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText1">RGU Ambulance Agency</h3>
+                          <p class="sub" id="SubtitleText1">Manager: NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText1">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText1">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText1">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" class="click" onclick="myFunction1()">Contact Details</a>
+                      <script>
+                      function myFunction1() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[1].content.$t.split(",");
+                            var title= data.feed.entry[1].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText2">Delhi Cantt Hospital's Ambulances</h3>
+                          <p class="sub" id="SubtitleText2">Manager: NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText2">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText2">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText2">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" onclick="myFunction2()"class="click">Contact Details</a>
+                      <script>
+                      function myFunction2() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[2].content.$t.split(",");
+                            var title= data.feed.entry[2].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText3">Indira Gandhi Ambulance Agency</h3>
+                          <p class="sub" id="SubtitleText3">Manager: NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText3">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText3">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText3">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" onclick="myFunction3()"class="click">Contact Details</a>
+                      <script>
+                      function myFunction3() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[3].content.$t.split(",");
+                            var title= data.feed.entry[3].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText4">Base Hospital Delhi Cantt</h3>
+                          <p class="sub" id="SubtitleText4">Management: DRDO (Government Agency)</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText4">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText4">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText4">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" onclick="myFunction4()"class="click">Contact Details</a>
+                      <script>
+                      function myFunction4() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[4].content.$t.split(",");
+                            var title= data.feed.entry[4].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText5">Base Hospital Delhi Cantt</h3>
+                          <p class="sub" id="SubtitleText5">Management: DRDO (Government Agency)</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText5">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText5">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText5">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" onclick="myFunction5()"class="click">Contact Details</a>
+                      <script>
+                      function myFunction5() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[5].content.$t.split(",");
+                            var title= data.feed.entry[5].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText6">Base Hospital Delhi Cantt</h3>
+                          <p class="sub" id="SubtitleText6">Management: DRDO (Government Agency)</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText6">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText6">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText6">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" onclick="myFunction6()"class="click">Contact Details</a>
+                      <script>
+                      function myFunction6() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[6].content.$t.split(",");
+                            var title= data.feed.entry[6].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText7">Base Hospital Delhi Cantt</h3>
+                          <p class="sub" id="SubtitleText7">Management: DRDO (Government Agency)</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText7">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText7">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText7">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" onclick="myFunction7()"class="click">Contact Details</a>
+                      <script>
+                      function myFunction7() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[7].content.$t.split(",");
+                            var title= data.feed.entry[7].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText8">Base Hospital Delhi Cantt</h3>
+                          <p class="sub" id="SubtitleText8">Management: DRDO (Government Agency)</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText8">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText8">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText8">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" onclick="myFunction8()"class="click">Contact Details</a>
+                      <script>
+                      function myFunction8() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[8].content.$t.split(",");
+                            var title= data.feed.entry[8].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+                  <article class="row">
+                    <div class="grid1">
+                    <article class="hel">
+                      <div class="text">
+                          <h3 id="TitleText9">Base Hospital Delhi Cantt</h3>
+                          <p class="sub" id="SubtitleText9">Management: DRDO (Government Agency)</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Total</h4>
+                          <p class="sub1" id="TotalText9">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel1">
+                      <div class="text">
+                          <h4>Available</h4>
+                          <p class="sub1" id="VacantText9">NA</p>
+                      </div>
+                    </article>
+                    <article class="hel2">
+                      <div class="text">
+                          <h4>Last Updated</h4>
+                          <p class="sub1" id="LastText9">NA</p>
+                      </div>
+                    </article>
+                    </div>
+                    <div class="button">
+                      <a href=" " class="btn">Location</a>
+                    </div>
+                    <div class="button1">
+                      <a href="#" onclick="myFunction9()" class="click">Contact Details</a>
+                      <script>
+                      function myFunction9() {
+                        fetch('https://spreadsheets.google.com/feeds/list/127azwqwBtM9GS9HyWmjB_trpQupKIRGP2jpPemHV5gc/od6/public/basic?alt=json')
+                        .then((response) => {
+                          return response.json();
+                        })
+                        .then((data) => {
+                            var s= data.feed.entry[9].content.$t.split(",");
+                            var title= data.feed.entry[9].title.$t;
+                            var s1= s[4].split("contact: ");
+                            var contact=s1[1];
+                            var s2= s[5].split("mail: ");
+                            var mail=s2[1];
+                            var s3= s[3].split("manager: Manager: ");
+                            var manager=s3[1];
+                            document.getElementById("manager").innerHTML = manager;
+                            document.getElementById("title").innerHTML = title;
+                            document.getElementById("contact").innerHTML = contact;
+                            document.getElementById("mail").innerHTML = mail;
+                          })
+                          .catch();
+                      }
+                    </script>
+                    </div>
+                  </article>
+
+
+              </main>
+            </div>
+            <div class="popup_box">
+              <img src="assets/man.png" alt="">
+              <h1 id="title">NA</h1>
+              <label>Manager's Name: </label>
+              <label id="manager">NA</label><br>
+              <label>Contact Number: </label>
+              <label id="contact">0</label><br>
+              <label>E-Mail ID: </label>
+              <label id="mail">NA</label>
+              <div class="btns">
+              <a href="#" class="btn1">Close Alert</a>
+              </div>
+            </div>
+
+    </header>
+  </body>
+</html>
