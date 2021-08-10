@@ -5,6 +5,7 @@
     <link rel="icon" href="assets/favicon.png" type="image/icon type">
     <link rel="stylesheet" type="text/css" href="css/hospital.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
       $(document).ready(function(){
@@ -21,6 +22,25 @@
   <body>
     <header>
     <div class="main">
+      <!-- back to top button -->
+      <a id="button"></a>
+      <script type="text/javascript">
+      var btn = $('#button');
+        $(window).scroll(function() {
+          if ($(window).scrollTop() > 30) {
+            btn.addClass('show');
+          }
+          else {
+            btn.removeClass('show');
+          }
+        });
+
+        btn.on('click', function(e) {
+          e.preventDefault();
+          $('html, body').animate({scrollTop:0}, '30');
+        });
+      </script>
+      <!-- end of back to top button -->
       <ul>
         <button><a href="index.html">HOME</a></button>
         <button><a href="symptoms.html">SYMPTOMS</a></button>
