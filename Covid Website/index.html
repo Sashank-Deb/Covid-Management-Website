@@ -111,7 +111,7 @@
                     </article>
                     <script>
 
-                    fetch('https://api.covid19india.org/data.json')
+                    fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                     .then((response) => {
                     return response.json();
                     })
@@ -156,7 +156,7 @@
                           <p class="counter2" id="counter2">0</p>
                           <p class="delta">+<span id="myText-dc"></p>
                           <script>
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                           return response.json();
                         })
@@ -191,7 +191,7 @@
                           	updateCount();
                           });
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -213,7 +213,7 @@
                           <p class="counter3" id="counter3">0</p>
                           <p class="delta">+<span id="myText-dr"></p>
                           <script>
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                           return response.json();
                         })
@@ -248,7 +248,7 @@
                           	updateCount();
                           });
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -270,7 +270,7 @@
                           <p class="counter" id="counter">0</p>
                           <p class="delta">+<span id="myText-dd"></p>
                           <script>
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                           return response.json();
                         })
@@ -309,7 +309,7 @@
                             updateCount();
                           });
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -879,7 +879,7 @@ if(window.innerWidth >= 420) {// override look for non mobile
 
                         <script>
                         function myFunction(value) {
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -917,7 +917,7 @@ if(window.innerWidth >= 420) {// override look for non mobile
                           updateCount();
                         });
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -955,7 +955,7 @@ if(window.innerWidth >= 420) {// override look for non mobile
                             updateCount();
                           });
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -993,7 +993,7 @@ if(window.innerWidth >= 420) {// override look for non mobile
                           	updateCount();
                           });
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -1034,7 +1034,7 @@ if(window.innerWidth >= 420) {// override look for non mobile
                           });
 
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -1042,7 +1042,7 @@ if(window.innerWidth >= 420) {// override look for non mobile
                           var s5= data.statewise[value].deltaconfirmed;
                           document.getElementById("myText-dc").innerHTML = s5;
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
@@ -1050,7 +1050,7 @@ if(window.innerWidth >= 420) {// override look for non mobile
                           var s6= data.statewise[value].deltarecovered;
                           document.getElementById("myText-dr").innerHTML = s6;
                         })
-                        fetch('https://api.covid19india.org/data.json')
+                        fetch('https://api.covid19india.org/data.json', {'mode': 'no-cors'})
                         .then((response) => {
                         return response.json();
                         })
